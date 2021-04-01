@@ -21,6 +21,7 @@ func run() error {
 	}
 	fmt.Printf("length of bytes for input json openapi doc: %v\n", len(jb))
 
+	// https://pkg.go.dev/github.com/golang/protobuf/jsonpb#Unmarshaler.Unmarshal may be any alternative here for decoding json.
 	doc, err := openapi_v2.ParseDocument(jb)
 	if err != nil {
 		return err
